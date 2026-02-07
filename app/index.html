@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Group Detector | Fingerprint Analysis</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <!-- Custom CSS -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-tint me-2"></i>BloodGroupDetector
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" onclick="showPage('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#signin" onclick="showPage('signin')">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#signup" onclick="showPage('signup')">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary-custom ms-lg-2 mt-2 mt-lg-0" href="#getstarted" onclick="showPage('getstarted')">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="page-content">
+        <!-- Home Page -->
+        <div id="home" class="page">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="container">
+                    <h1 class="hero-title">Detect Blood Group from Fingerprint</h1>
+                    <p class="hero-subtitle">Revolutionary AI-powered technology to determine blood group using just a fingerprint image. Fast, accurate, and non-invasive.</p>
+                    <a href="#getstarted" class="btn btn-primary-custom" onclick="showPage('getstarted')">Try It Now</a>
+                </div>
+            </section>
+            
+            <!-- Features Section -->
+            <section class="container py-5">
+                <h2 class="section-title">How It Works</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-fingerprint"></i>
+                            </div>
+                            <h3>Upload Fingerprint</h3>
+                            <p>Simply upload a clear image of your fingerprint using our secure platform.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>AI Analysis</h3>
+                            <p>Our advanced AI algorithm analyzes the unique patterns in your fingerprint.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h3>Get Results</h3>
+                            <p>Receive your blood group analysis within seconds, along with detailed information.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- How to Use Section -->
+            <section class="about-section">
+                <div class="container">
+                    <h2 class="section-title">Benefits of Our Technology</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h3>Why Choose BloodDetect?</h3>
+                            <p>Our innovative technology offers a non-invasive, pain-free alternative to traditional blood testing methods. By analyzing the unique patterns in your fingerprint, we can determine your blood group with high accuracy.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Non-invasive and pain-free</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Fast results in under 30 seconds</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> High accuracy rate (over 95%)</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Secure and private data handling</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Accessible from any device</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="text-center">
+                                <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fingerprint analysis" class="img-fluid rounded shadow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page" style="display: none;">
+            <div class="container page-content">
+                <h1 class="section-title">About BloodGroupDetector</h1>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3>Our Mission</h3>
+                        <p>BloodDetect aims to revolutionize how blood group testing is performed by eliminating the need for invasive blood draws. Our technology leverages cutting-edge machine learning algorithms to analyze fingerprint patterns and correlate them with blood group characteristics.</p>
+                        <p>Founded in 2023, our team of biomedical engineers, data scientists, and healthcare professionals work tirelessly to improve the accuracy and accessibility of blood group testing worldwide.</p>
+                        
+                        <h3 class="mt-5">The Science Behind It</h3>
+                        <p>Research has shown correlations between fingerprint patterns and various genetic traits, including blood groups. Our AI model has been trained on thousands of fingerprint images with known blood groups to identify these subtle correlations.</p>
+                        <p>While our technology is not intended to replace traditional blood tests for medical procedures, it provides a convenient, preliminary screening method that can be particularly useful in emergencies or remote locations.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-center mb-4">
+                            <img src="https://cdn.gamma.app/l92owj096cegpgm/generated-images/XS0FNFy-qq4m9rPcV1p3n.png" alt="Medical technology" class="img-fluid rounded shadow">
+                        </div>
+                        
+                        <h3>Accuracy & Reliability</h3>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95% Accuracy</div>
+                        </div>
+                        <p>Our current model achieves 95% accuracy in controlled testing environments. We continuously improve our algorithms with new data to increase reliability.</p>
+                        
+                        <h3 class="mt-5">Privacy Commitment</h3>
+                        <p>We take your privacy seriously. All fingerprint images are anonymized and encrypted. We never share your personal data with third parties without your explicit consent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign In Page -->
+        <div id="signin" class="page" style="display: none;">
+            <div class="container page-content">
+                <div class="login-container">
+                    <h2 class="text-center mb-4">Sign In to Your Account</h2>
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100">Sign In</button>
+                        <div class="text-center mt-3">
+                            <p>Don't have an account? <a href="#signup" onclick="showPage('signup')">Sign up here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Page -->
+        <div id="signup" class="page" style="display: none;">
+            <div class="container page-content">
+                <div class="signup-container">
+                    <h2 class="text-center mb-4">Create Your Account</h2>
+                    <form id="signupForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">I agree to the Terms & Conditions</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100">Create Account</button>
+                        <div class="text-center mt-3">
+                            <p>Already have an account? <a href="#signin" onclick="showPage('signin')">Sign in here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Get Started Page -->
+        <div id="getstarted" class="page" style="display: none;">
+            <div class="container page-content">
+                <h1 class="section-title">Detect Your Blood Group</h1>
+                <p class="text-center mb-5">Upload a clear image of your fingerprint to determine your blood group.</p>
+                
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- Upload Area -->
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <h3>Upload Your Fingerprint Image</h3>
+                            <p>Drag and drop your image here or click to browse</p>
+                            <p class="text-muted">Supported formats: JPG, PNG, BMP (Max size: 5MB)</p>
+                            <input type="file" id="fingerprintUpload" accept="image/*" style="display: none;">
+                    
+                             <input type="file" id="fingerprint">
+                          <button onclick="predictBloodGroup()">Predict</button>
+                            <p id="result"></p>
+                        </div>
+                        <!-- Fingerprint Preview -->
+                        <div class="fingerprint-preview" id="fingerprintPreview">
+                            <img id="previewImage" src="" alt="Fingerprint Preview">
+                        </div>
+                        <!-- Results -->
+                        <div id="resultsContainer" style="display: none;">
+                            <h3 class="text-center">Analysis Results</h3>
+                            <div class="blood-group-result" id="bloodGroupResult">A+</div>
+                            <div class="text-center mb-4">
+                                <p>Your blood group has been determined based on fingerprint analysis.</p>
+                            </div>
+                            
+                            <div class="blood-group-info">
+                                <h5>About Blood Group <span id="bloodGroupType">A+</span></h5>
+                                <p id="bloodGroupDescription">Blood group A+ is the second most common blood type. If your blood is A+, you can give blood to people with A+ and AB+ blood types, and receive blood from A+, A-, O+ and O- donors.</p>
+                                
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <h6>Can donate to:</h6>
+                                        <p id="canDonateTo">A+, AB+</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Can receive from:</h6>
+                                        <p id="canReceiveFrom">A+, A-, O+, O-</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-info mt-3">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong>Disclaimer:</strong> This result is based on AI analysis of your fingerprint. For medical purposes, please confirm with a traditional blood test.
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5>BloodDetect</h5>
+                    <p>Revolutionary AI technology for non-invasive blood group detection using fingerprint analysis.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white text-decoration-none" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#about" class="text-white text-decoration-none" onclick="showPage('about')">About</a></li>
+                        <li><a href="#getstarted" class="text-white text-decoration-none" onclick="showPage('getstarted')">Get Started</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5>Account</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#signin" class="text-white text-decoration-none" onclick="showPage('signin')">Sign In</a></li>
+                        <li><a href="#signup" class="text-white text-decoration-none" onclick="showPage('signup')">Sign Up</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-envelope me-2"></i> contact@blooddetect.com</p>
+                    <p><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123, BloodGroupDetector </p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2026 BloodGroupDetector. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/script.js"></script>
+    <!-- Custom JavaScript -->
+    
+</body>
+</html>
